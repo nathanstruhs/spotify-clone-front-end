@@ -1,15 +1,15 @@
 <template>
-  <div class="hello">
+  <div>
     <h1>{{ msg }}</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+  name: 'Songs',
   data () {
     return {
-      msg: 'Spotify Clone'
+      msg: 'Songs'
     }
   }
 }

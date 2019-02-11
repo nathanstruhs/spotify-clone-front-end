@@ -1,22 +1,29 @@
 <template>
   <div id="app">
-    <router-view/>
+    <div class='columns'>
+      <Sidebar />
+      <Songs />
+    </div>
   </div>
 </template>
 
 <script>
+import Sidebar from './components/Sidebar';
+import Songs from './components/Songs';
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Sidebar,
+    Songs
+  }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  @import 'styles/bulma-overrides';
+
+  body {
+    background-color: black;
+  }
 </style>
