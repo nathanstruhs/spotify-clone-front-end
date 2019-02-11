@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div class='columns'>
-      <Sidebar />
-      <Songs />
+      <Sidebar :musicLibrary='musicLibrary' />
+      <Songs :musicLibrary='musicLibrary' />
     </div>
   </div>
 </template>
@@ -13,6 +13,7 @@ import Songs from './components/Songs';
 
 export default {
   name: 'App',
+  props: ['musicLibrary'],
   components: {
     Sidebar,
     Songs
