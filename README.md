@@ -1,6 +1,6 @@
 # spotify-clone-front-end
 
-> Spotify clone front-end, CS 493
+> Spotify Clone Front-end, CS 493
 
 ## Build Setup
 
