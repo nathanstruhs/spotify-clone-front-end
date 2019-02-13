@@ -1,9 +1,16 @@
 export default {
   state: {
+    musicLibrary: {},
     currentArtist: '',
     currentAlbum: ''
   },
 
+  getMusicLibrary() {
+    return this.state.musicLibrary;
+  },
+  setMusicLibrary(musicLibrary) {
+    this.state.musicLibrary = musicLibrary;
+  },
   getCurrentArtist() {
     return this.state.currentArtist;
   },

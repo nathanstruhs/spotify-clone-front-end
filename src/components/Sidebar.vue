@@ -4,7 +4,7 @@
       <br>
       <p class='menu-label'>Your Library</p>
       <ul class='menu-list'>
-          <li v-for="item in musicLibrary" v-bind:key="item.id">
+          <li v-for="item in storeState.musicLibrary" v-bind:key="item.id">
             <a @click='toggleAlbum($event, item.artist)'>{{ item.artist }} ▼</a>
             <ul class='album-dropdown' :id='normalize(item.artist) + "-dropdown"'>
               <li v-for="album in item.albums" v-bind:key="album.id">
@@ -22,7 +22,6 @@ import Store from '../store';
 
 export default {
   name: 'Sidebar',
-  props: ['musicLibrary'],
   data () {
     return {
       msg: 'Sidebar',
@@ -39,8 +38,6 @@ export default {
     normalize: function(str) {
       return str.toString().replace(/\s+/g, '-').toLowerCase();
     },
-
-
     setCurrentArtist: function(artist) {
       if (this.storeState.currentArtist !== artist) {
         Store.setCurrentAlbum('');

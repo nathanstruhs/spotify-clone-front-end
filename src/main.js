@@ -4,6 +4,7 @@ import router from './router'
 import Buefy from 'buefy'
 import axios from 'axios'
 import 'buefy/dist/buefy.css'
+import Store from './store';
 
 Vue.config.productionTip = false
 
@@ -20,7 +21,7 @@ new Vue({
   },
 
   mounted () {
-    axios.get('http://54.236.237.59:3000/')
-      .then(response =>  (this.musicLibrary = response.data.musicLibrary));
+    axios.get('http://34.205.154.0:3000/')
+      .then(response =>  (Store.setMusicLibrary(response.data.musicLibrary)));
   }
 })
