@@ -59,4 +59,8 @@ audio {
 .song-row {
   color: white;
 }
+
+.title {
+  color: white;
+}
 </style>

@@ -64,6 +64,10 @@ export default {
     padding-left: 10px;
   }
 
+  a {
+    color: white;
+  }
+
   .album-dropdown {
     display: none;
   }
